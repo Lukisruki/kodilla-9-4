@@ -1,29 +1,14 @@
-for (let i=0; i<1; i++) {
-
-    console.log('    *');
-
-    for (let y=0; y<1; y++) {
-        console.log('   ***');
-    }
-    for (let y=0; y<1; y++) {
-        console.log('  *****');
-    }
-    for (let y=0; y<1; y++) {
-        console.log(' *******');
-    }
-    for (let y=0; y<1; y++) {
-        console.log('*********');
-    }
-
+function drawTree(levels) {
+  console.log(levels);
+  var star = "";
+  for (var i = 0; i < levels; i++) {
+      
+      var space = "";
+      for (var j = levels; j > i; j--) {
+        space += "0";
+      }
+      star += "*";
+      console.log(space + star);
+  }
 }
-
-/* let star = '';
-
-    for (let j=0; j<1; j++) {
-        star += '';
-        for (let i=0; i<1; i++) {
-            star += '*';
-    }
-}
-
-console.log(star); */
+drawTree(17);
